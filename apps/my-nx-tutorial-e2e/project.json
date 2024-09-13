@@ -1,0 +1,9 @@
+{
+  "name": "my-nx-tutorial-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/my-nx-tutorial-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["my-nx-tutorial"],
+  "// targets": "to see all targets run: nx show project my-nx-tutorial-e2e --web",
+  "targets": {}
+}

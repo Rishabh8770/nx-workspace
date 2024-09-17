@@ -4,12 +4,12 @@
   "sourceRoot": "apps/my-nx-tutorial",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project my-nx-tutorial --web",
   "targets": {
     "serve": {
       "executor": "@nrwl/next:server",
       "options": {
-        "buildTarget": "my-nx-tutorial:build"
+        "buildTarget": "my-nx-tutorial:build",
+        "proxyConfig": "apps/my-nx-tutorial/proxy.conf.json"
       }
     }
   }

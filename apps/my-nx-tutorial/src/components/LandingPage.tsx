@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Todo } from '@my-nx-tutorial/data';
+import { Todos } from '@my-nx-tutorial/ui';
 
 export const LandingPage = () => {
   const [todos, setTodos] = useState<Todo[]>([
@@ -27,19 +28,17 @@ export const LandingPage = () => {
   }
 
   return (
-    <>
-      <h1>Todos</h1>
-      <ul>
-        {todos.map((t) => (
-          <li className="todo" key={t.title}>
-            {t.title}
-          </li>
-        ))}
-      </ul>
-      <button id={'add-todo'} onClick={addTodo}>
+    <div className="m-4 space-y-4">
+      <h1 className="text-xl font-semibold underline">Todos</h1>
+      <Todos todos={todos}/>
+      <button
+        id={'add-todo'}
+        onClick={addTodo}
+        className="border rounded-md p-2"
+      >
         Add todo
       </button>
-    </>
+    </div>
   );
 };
 

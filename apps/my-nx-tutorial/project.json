@@ -11,6 +11,12 @@
         "buildTarget": "my-nx-tutorial:build",
         "proxyConfig": "apps/my-nx-tutorial/proxy.conf.json"
       }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/my-nx-tutorial/**/*.ts", "libs/my-nx-tutorial/**/*.ts"]
+      }
     }
   }
 }
